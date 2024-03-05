@@ -28,11 +28,12 @@ To be uploaded..
 
 ## Requirements
 
-Python 3.8.10
-YOLOv8 (Ultralytics)
-Streamlit
-PyTorch
-lapx
+- Python 3.8.10
+- YOLOv8 (Ultralytics)
+- Streamlit
+- PyTorch
+- lapx
+- pytube
 
 ```bash
 pip install ultralytics streamlit pafy
