@@ -6,6 +6,7 @@ import PIL
 import streamlit as st
 import pandas as pd
 import requests
+import base64
 
 # Local Modules
 import settings
@@ -135,7 +136,34 @@ if source_radio == settings.IMAGE:
                     st.write("No image is uploaded yet!")
 
 elif source_radio == settings.VIDEO:
-    helper.play_stored_video(confidence, model)
+    #helper.play_stored_video(confidence, model)
+    video_file = st.sidebar.file_uploader("Choose a video...", type=["mp4", "avi", "mov", "mkv"])
+    if video_file is not None:
+        video_bytes = video_file.read()
+
+        if st.sidebar.button('Detect Objects'):
+            try:
+                anthill_count, ant_count = helper.process_video(video_bytes, confidence, model)
+
+                # Create a DataFrame with the detection results
+                data = {
+                    'Category': ['Anthill', 'Ants'],
+                    'Amount': [anthill_count, ant_count]
+                }
+                df = pd.DataFrame(data)
+
+                # Display the DataFrame
+                st.dataframe(df)
+
+                # Add a download button for the DataFrame
+                csv = df.to_csv(index=False)
+                b64 = base64.b64encode(csv.encode()).decode()
+                href = f'<a href="data:file/csv;base64,{b64}" download="detection_results.csv">Download CSV</a>'
+                st.markdown(href, unsafe_allow_html=True)
+            except Exception as e:
+                st.error(f"Error processing video: {str(e)}")
+    else:
+        st.warning("Please upload a video file.")
 
 elif source_radio == settings.WEBCAM:
     helper.play_webcam(confidence, model)

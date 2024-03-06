@@ -3,8 +3,9 @@ import time
 import streamlit as st
 import cv2
 from pytube import YouTube
-
 import settings
+import tempfile
+import os
 
 
 def load_model(model_path):
@@ -229,3 +230,51 @@ def play_stored_video(conf, model):
                     break
         except Exception as e:
             st.sidebar.error("Error loading video: " + str(e))
+
+def process_video(video_bytes, confidence, model):
+    try:
+        video_file = tempfile.NamedTemporaryFile(delete=False)
+        video_file.write(video_bytes)
+        video_path = video_file.name
+
+        cap = cv2.VideoCapture(video_path)
+
+        st_frame = st.empty()
+
+        anthill_counts = {}
+        ant_count = 0
+
+        while cap.isOpened():
+            ret, frame = cap.read()
+            if not ret:
+                break
+
+            results = model.track(frame, conf=confidence, persist=True)
+
+            for result in results:
+                boxes = result.boxes
+                for box in boxes:
+                    if box.cls == settings.ANTHILL_CLASS_INDEX:
+                        anthill_id = box.id.item()
+                        if anthill_id not in anthill_counts:
+                            anthill_counts[anthill_id] = 1
+                        else:
+                            anthill_counts[anthill_id] += 1
+                    elif box.cls == settings.ANT_CLASS_INDEX:
+                        ant_count += 1
+
+            res_plotted = result.plot()
+            res_plotted = cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB)
+            st_frame.image(res_plotted, use_column_width=True)
+
+    finally:
+        if 'cap' in locals():
+            cap.release()
+        if 'video_file' in locals() and not video_file.closed:
+            video_file.close()
+        if 'video_path' in locals():
+            os.unlink(video_path)
+
+    total_anthill_count = len(anthill_counts)
+
+    return total_anthill_count, ant_count
