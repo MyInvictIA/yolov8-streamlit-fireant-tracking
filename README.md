@@ -1,32 +1,25 @@
-# Real-time Object Detection and Tracking with YOLOv8 and Streamlit
+# 🌟 Real-time Object Detection and Tracking with YOLOv8 and Streamlit 🎉
+Get ready for cutting-edge object detection magic! This web app combines the power of YOLOv8 for object detection and segmentation with the simplicity of the Streamlit framework to deliver real-time object detection and tracking in video streams. ✨
 
-Web Application using YOLOv8 algorithm for object detection and segmentation in pair with Streamlit framework for Real-Time Object Detection and tracking in video streams.
+## 🚀 Demo WebApp
+- (Coming soon!). Check out this app in action – it's up and running on the Streamlit cloud server! Thanks to the fantastic folks at Streamlit for supporting the community with cloud uploads. Here's where you can see it live:
 
-## Demo WebApp
+- [yolov8-streamlit-detection-tracking-webapp]()
 
-This app is up and running on Streamlit cloud server!!! Thanks 'Streamlit' for the community support for the cloud upload. You can check the demo of this web application on the link below.
+## 🕵️‍♀️ Tracking with Object Detection Demo Video
+Coming soon! Stay tuned for a demo showcasing this awesome feature
 
-[yolov8-streamlit-detection-tracking-webapp]()
+## 📸 Demo Pics
+-  Home page
+- Picture coming soon!
 
-## Tracking With Object Detection Demo
+## 📸 Page after uploading an image and object detection
+Picture coming soon!
 
-To be uploaded..
+## 📸 Segmentation task on image
+Picture coming soon!
 
-## Demo Pics
-
-### Home page
-
-To be uploaded..
-
-### Page after uploading an image and object detection
-
-To be uploaded..
-
-### Segmentation task on image
-
-To be uploaded..
-
-## Requirements
+## 📦 Requirements
 
 - Python 3.8.10
 - YOLOv8 (Ultralytics)
@@ -40,71 +33,54 @@ pip install ultralytics streamlit pafy
 pip install pytube lapx
 ```
 
-## Installation
+## 🛠 Installation
+- Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
+- Hop into the directory: `cd yolov8-streamlit-fireant-tracking`
+- Upgrade PIP: `python -m pip install --upgrade pip`
+- Follow the PyTorch installation instructions for your setup: https://pytorch.org/get-started/locally/
 
-- Clone the repository: git clone <https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git>
-- Change to the repository directory: `cd yolov8-streamlit-fireant-tracking`
-- Upgrade PIP
+- For example, for a PC with Windows and NVIDIA GPU supporting CUDA 12.1:
 ```bash
-python -m pip install --upgrade pip
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
-- For PyTorch select your custom options of your computer following the [official page](https://pytorch.org/get-started/locally/).
-  - For example, for a Windows PC with NVIDIA:
 
-    ```bash
-    pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-    ```
+## 🌟 Usage
+Launch the app: `streamlit run app.py`
+A new browser window will magically appear – that's where your image detection adventure begins!
 
-## Usage
+### 🔧 ML Model Config
+- Task time! Choose your mission: Segmentation
+- Set your confidence level for the model
+- Use the slider to adjust the confidence threshold (25-100).
+- Once the model config is good to go, pick your source.
 
-- Run the app with the following command:
-```bash
-streamlit run app.py
-```
-- The app should open in a new browser window.
-- We are now inside the image detection page.
+### 🖼 Image Detection
+- The default image and its object-detected counterpart are proudly displayed on the main page.
+- Choose your source (the "Image" radio button – ready for local uploads or internet images).
+- Click "Browse files" to upload your image.
+- Hit the "Detect Objects" button, and watch the object detection algorithm work its magic on your image with your chosen confidence threshold.
+- The result – your image with detected objects – will appear. Click "Download Image" to save it!
 
-### ML Model Config
+## 🎬 Detection in Videos
+- Demo Coming soon!.
 
-- Select task (Segmentation)
-- Select model confidence
-- Use the slider to adjust the confidence threshold (25-100) for the model.
+- Press on `Detect Objects in Video ` button and the selected task will start on the selected video.
 
-One the model config is done, select a source.
-
-### Detection on images
-
-- The default image with its objects-detected image is displayed on the main page.
-- Select a source. (radio button selection `Image`, can be used for Local or images from Internet).
-- Upload an image by clicking on the "Browse files" button.
-- Click the "Detect Objects" button to run the object detection algorithm on the uploaded image with the selected confidence threshold.
-- The resulting image with objects detected will be displayed on the page. Click the "Download Image" button to download the image.("If save image to download" is selected)
-
-## Detection in Videos
-- To be updated...
-
-- Click on `Detect Objects in Video ` button and the selected task (detection/segmentation) will start on the selected video.
-
-### Detection on RTSP
-
+### 🌐 Detection on RTSP
 - Select the RTSP stream button
-- Enter the rtsp url inside the textbox and hit `Detect Objects` button
+- Enter the RTSP URL and press the "Detect Objects" button
 
-### Detection on YouTube Video URL
+### ▶️ Detection on YouTube Video URL
+- Choose YouTube as your source
+- Paste the URL into the text box.
+- Let the detection/segmentation task do its thing on the YouTube video!
 
-- Select the source as YouTube
-- Copy paste the url inside the text box.
-- The detection/segmentation task will start on the YouTube video url
+## 🙏 Acknowledgements
 
-To be uploaded..
-
-## Acknowledgements
-
-- This app is based on the YOLOv8(<https://github.com/ultralytics/ultralytics>) object detection algorithm.
-- The app uses the Streamlit(<https://github.com/streamlit/streamlit>) library for the user interface.
+- This app owes its awesome object detection skills to the YOLOv8 algorithm (<https://github.com/ultralytics/ultralytics>).
+- The Streamlit library (<https://github.com/streamlit/streamlit>) makes building the user interface a breeze.
 - The original code is based in the source code from [CodingMantras/yolov8-streamlit-detection-tracking](https://github.com/CodingMantras/yolov8-streamlit-detection-tracking)
-### Disclaimer
 
-Please note that this project is intended for educational purposes only and should not be used in production environments yet.
-
-**Hit star ⭐ if you like this repo!!!**
+### ⚠️ Disclaimer
+- This project is currently rockin' the educational world.  Hold tight before deploying it in production environments!
+- If you love this repo, don't forget to leave a star! ⭐
