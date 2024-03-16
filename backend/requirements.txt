@@ -1,0 +1,7 @@
+fastapi[standard]
+uvicorn[standard]
+numpy[standard]
+opencv-python-headless==4.8.1.78
+Pillow[standard]
+ultralytics[standard]
+python-multipart[standard]

@@ -1,0 +1,7 @@
+opencv_python==4.9.0.80
+pandas==2.0.3
+Pillow==10.2.0
+pytube==15.0.0
+Requests==2.31.0
+streamlit==1.32.2
+ultralytics==8.1.28

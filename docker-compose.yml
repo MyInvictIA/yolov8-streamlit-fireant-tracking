@@ -1,0 +1,31 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: yolov8-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./original_images:/app/original_images
+      - ./processed_images:/app/processed_images
+      - ./weights:/app/weights
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: yolov8-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./original_images:/app/original_images
+      - ./processed_images:/app/processed_images
+    depends_on:
+      - backend

@@ -1,0 +1,29 @@
+# Comandos backend y frontend
+
+notepad C:\Users\Matthew\.wslconfig.txt
+
+-------------
+
+docker build -t yolov8-backend .
+
+docker run -d --name yolov8-backend -p 8000:8000 -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/original_images:/app/original_images -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/processed_images:/app/processed_images -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/weights:/app/weights yolov8-backend
+
+docker run --gpus all -d --name yolov8-backend -p 8000:8000 -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/original_images:/app/original_images -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/processed_images:/app/processed_images -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/weights:/app/weights yolov8-backend
+
+docker run -d --name yolov8-backend -p 8000:8000 \
+  -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/original_images:/app/original_images \
+  -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/processed_images:/app/processed_images \
+  -v D:\software\Scripts\yolov8-streamlit-fireant-tracking/weights:/app/weights \
+  yolov8-backend
+----------
+
+D:\temp\curl-8.6.0_6-win64-mingw\curl-8.6.0_6-win64-mingw\bin\curl.exe -X POST -F "image=@C:\Images\antnest.png" http://localhost:8000/detect
+
+
+------------
+
+docker-compose down
+docker-compose build
+docker-compose up -d
+
+
