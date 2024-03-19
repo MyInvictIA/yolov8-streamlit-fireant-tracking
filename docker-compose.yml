@@ -13,6 +13,9 @@ services:
       - ./weights:/app/weights
     deploy:
       resources:
+        limits:
+          cpus: '0.50'
+          memory: 2048M
         reservations:
           devices:
             - capabilities: [gpu]
@@ -29,3 +32,8 @@ services:
       - ./processed_images:/app/processed_images
     depends_on:
       - backend
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 2048M

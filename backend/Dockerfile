@@ -8,12 +8,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-WORKDIR /app
-
-COPY ./requirements.txt /app/requirements.txt
+COPY requirements.txt /app
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-COPY ./ /app
+COPY . /app
 
 EXPOSE 8000
 
