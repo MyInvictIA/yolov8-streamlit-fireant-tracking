@@ -1,10 +1,10 @@
 # 🌟🐜 Real-time Fire Ants and Nests Detection and Tracking with YOLOv8 and Streamlit 🎉👀
 Get ready for cutting-edge object detection magic! This web app combines the power of YOLOv8 🔍 for object detection and segmentation with the simplicity of the Streamlit framework to deliver real-time object detection and tracking in video streams. ✨🎥
 
-### 📝⌛ To Do
+## 📝⌛ To Do
 - [ ] Examples of the app running.
 - [ ] Examples of API usage.
-- [ ]🔄 Migrate the application to a new Dashboard based on Vue.js and Flask among others.
+- [ ] 🔄 Migrate the application to a new Dashboard based on Vue.js and Flask among others.
 
 ## 🚀💻 Demo WebApp
 [![Demonstration of WebApp](https://img.youtube.com/vi/mBqrbDk6U6c/0.jpg)](https://www.youtube.com/watch?v=mBqrbDk6U6c)
@@ -17,7 +17,7 @@ Get ready for cutting-edge object detection magic! This web app combines the pow
 Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 
 ## 📸📷 Demo Pics
--  Home page 🏠
+Home page 🏠
 - Picture coming soon!  📸
 
 ## 📸🔍 Page after uploading an image and object detection
@@ -87,11 +87,11 @@ Picture coming soon! 🎞️
 - The Streamlit library (<https://github.com/streamlit/streamlit>) makes building the user interface a breeze.
 - The original code is based in the source code from [CodingMantras/yolov8-streamlit-detection-tracking](https://github.com/CodingMantras/yolov8-streamlit-detection-tracking)
 
-### ⚠️😅 Disclaimer
+## ⚠️😅 Disclaimer
 - This project is currently rockin' the educational world.  Hold tight before deploying it in production environments! 🚀
 - If you love this repo, don't forget to leave a star! ⭐
 
-### 🏆🌐 Contests and Competitions
+## 🏆🌐 Contests and Competitions
 This project has taken part in the following contests and competitions:
 - Castilla y León' Boards Innovation Contest 2023
 - Huawei ICT Competition in the Innovate Stage.
