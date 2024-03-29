@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   backend:
     build:
@@ -8,9 +8,12 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./original_images:/app/original_images
-      - ./processed_images:/app/processed_images
-      - ./weights:/app/weights
+      - original_images:/app/original_images
+      - original_videos:/app/original_videos  # Añadiendo volumen de original_videos
+      - processed_images:/app/processed_images
+      - processed_videos:/app/processed_videos
+      - weights:/app/weights
+      - ./backend/main.py:/app/main.py
     deploy:
       resources:
         limits:
@@ -18,7 +21,9 @@ services:
           memory: 2048M
         reservations:
           devices:
-            - capabilities: [gpu]
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
 
   frontend:
     build:
@@ -28,8 +33,11 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      - ./original_images:/app/original_images
-      - ./processed_images:/app/processed_images
+      - original_images:/app/original_images
+      - original_videos:/app/original_videos  # Añadiendo volumen de original_videos
+      - processed_images:/app/processed_images
+      - processed_videos:/app/processed_videos
+      - ./frontend/streamlit_app.py:/app/streamlit_app.py
     depends_on:
       - backend
     deploy:
@@ -37,3 +45,10 @@ services:
         limits:
           cpus: '0.50'
           memory: 2048M
+
+volumes:
+  original_images:
+  original_videos:  # Añadiendo volumen de original_videos
+  processed_images:
+  processed_videos:
+  weights:

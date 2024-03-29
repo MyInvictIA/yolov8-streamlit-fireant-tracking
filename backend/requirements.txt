@@ -2,6 +2,10 @@ fastapi[standard]
 uvicorn[standard]
 numpy[standard]
 opencv-python-headless==4.8.1.78
+lapx>=0.5.2
+Cython>=0.29.32
 Pillow[standard]
 ultralytics[standard]
 python-multipart[standard]
+aiofiles[standard]
+datetime[standard]

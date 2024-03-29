@@ -8,10 +8,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY requirements.txt /app
+COPY . /app
 RUN pip install --no-cache-dir --upgrade -r /app/requirements.txt
 
-COPY . /app
+COPY ./weights /app/weights
 
 EXPOSE 8000
 
