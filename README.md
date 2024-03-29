@@ -1,5 +1,9 @@
+
 # 🌟🐜 Real-time Fire Ants and Nests Detection and Tracking with YOLOv8 and Streamlit 🎉👀
 Get ready for cutting-edge object detection magic! This web app combines the power of YOLOv8 🔍 for object detection and segmentation with the simplicity of the Streamlit framework to deliver real-time object detection and tracking in video streams. ✨🎥
+
+## Announcements
+- 🏆🎉 We are excited to announce that our team, MyInvicTIA, has secured the third position in the Huawei ICT Competition at the Innovate Stage 2023-24! We are honored by this achievement and look forward to participating in the upcoming Castilla y León's Boards Innovation Contest. 
 
 ## 📝⌛ To Do
 - [ ] Examples of the app running.
