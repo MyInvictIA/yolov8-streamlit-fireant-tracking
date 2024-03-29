@@ -17,7 +17,7 @@ Get ready for cutting-edge object detection magic! This web app combines the pow
 Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 
 ## 📸📷 Demo Pics
-Home page 🏠
+- Home page 🏠
 - Picture coming soon!  📸
 
 ## 📸🔍 Page after uploading an image and object detection
@@ -43,6 +43,7 @@ Picture coming soon! 🎞️
 * aiofiles
 * datetime
 * pytube
+
 ## 🛠🔧 Installation
 - Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 - Hop into the directory: `cd yolov8-streamlit-fireant-tracking`
@@ -93,5 +94,6 @@ Picture coming soon! 🎞️
 
 ## 🏆🌐 Contests and Competitions
 This project has taken part in the following contests and competitions:
-- Castilla y León' Boards Innovation Contest 2023
-- Huawei ICT Competition in the Innovate Stage.
+- [Castilla y León's Boards Innovation Contest 2023](https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181050732/Premio/1285312846458/Propuesta)
+- [Huawei ICT Competition in the Innovate Stage.](https://e.huawei.com/en/talent/#/ict/innovation-details?zoneCode=071217&zoneId=98269613&compId=85131995&divisionName=Europe&type=C002&isCollectGender=N&enrollmentDeadline=null&compTotalApplicantCount=39)
+![huawei_ict_competition_2023-24.jpg](assets%2Fhuawei_ict_competition_2023-24.jpg)
