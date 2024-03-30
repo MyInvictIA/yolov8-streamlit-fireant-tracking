@@ -50,7 +50,7 @@ Picture coming soon! 🎞️
 
 ## 🛠🔧 Installation
 - Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
-- Hop into the directory: `cd yolov8-streamlit-fireant-tracking`
+- Hop into the directory: `cd yolov8-streamlit-fireant-tracking/yolov8_app`
 - Run the following command tu build the docker container: `docker-compose build`
 - Run the following command tu run the docker container: `docker-compose up -d`
 

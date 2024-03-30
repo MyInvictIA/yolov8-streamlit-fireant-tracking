@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  yolov8_app:
+    build:
+      context: ./yolov8_app
+      dockerfile: Dockerfile
+    volumes:
+      - ./yolov8_app/app.py:/app/app.py
+      - ./yolov8_app/weights:/app/weights
+      - ./yolov8_app/images:/app/images
+    ports:
+      - 8501:8501
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
