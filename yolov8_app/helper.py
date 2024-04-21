@@ -1,11 +1,15 @@
-from ultralytics import YOLO
-import time
+# Python In-built packages
+import os
+import tempfile
+
+# External packages
 import streamlit as st
 import cv2
 from pytube import YouTube
+from ultralytics import YOLO
+
+# Local Modules
 import settings
-import tempfile
-import os
 
 
 def load_model(model_path):
@@ -241,31 +245,15 @@ def process_video(video_bytes, confidence, model):
 
         st_frame = st.empty()
 
-        anthill_counts = {}
-        ant_count = 0
-
         while cap.isOpened():
             ret, frame = cap.read()
             if not ret:
                 break
 
             results = model.track(frame, conf=confidence, persist=True)
-
-            for result in results:
-                boxes = result.boxes
-                for box in boxes:
-                    if box.cls == settings.ANTHILL_CLASS_INDEX:
-                        anthill_id = box.id.item()
-                        if anthill_id not in anthill_counts:
-                            anthill_counts[anthill_id] = 1
-                        else:
-                            anthill_counts[anthill_id] += 1
-                    elif box.cls == settings.ANT_CLASS_INDEX:
-                        ant_count += 1
-
-            res_plotted = result.plot()
-            res_plotted = cv2.cvtColor(res_plotted, cv2.COLOR_BGR2RGB)
-            st_frame.image(res_plotted, use_column_width=True)
+            for res in results:
+                res_plotted = res.plot()[:, :, ::-1]
+                st_frame.image(res_plotted, use_column_width=True)
 
     finally:
         if 'cap' in locals():
@@ -274,7 +262,3 @@ def process_video(video_bytes, confidence, model):
             video_file.close()
         if 'video_path' in locals():
             os.unlink(video_path)
-
-    total_anthill_count = len(anthill_counts)
-
-    return total_anthill_count, ant_count

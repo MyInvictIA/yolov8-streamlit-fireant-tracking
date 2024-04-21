@@ -1,6 +1,7 @@
 # Dockerfile
 # Use an official PyTorch CUDA runtime as a parent image
-FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
+#FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
+FROM python:3.10-slim
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -11,8 +12,10 @@ RUN apt-get update && apt-get install -y \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
+
 # Add the current directory contents into the container at /app
-COPY . /app
+#COPY . /app
+COPY requirements.txt /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -21,4 +24,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8501
 
 # Run app.py when the container launches
-CMD ["streamlit", "run", "app.py"]
+#CMD ["streamlit", "run", "app.py"]
+CMD uvicorn main:app --host 0.0.0.0 --port 8000 & streamlit run --server.port 8501 app.py

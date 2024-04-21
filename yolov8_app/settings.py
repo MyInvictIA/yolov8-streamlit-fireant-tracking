@@ -7,12 +7,13 @@ ROOT = Path().resolve()
 
 # Sources
 IMAGE = 'Image'
+IMAGE_API = 'Image (API)'
 VIDEO = 'Video'
 WEBCAM = 'Webcam'
 RTSP = 'RTSP'
 YOUTUBE = 'YouTube'
 
-SOURCES_LIST = [IMAGE, VIDEO, WEBCAM, RTSP, YOUTUBE]
+SOURCES_LIST = [IMAGE, IMAGE_API, VIDEO, WEBCAM, RTSP, YOUTUBE]
 
 # Images config
 IMAGES_DIR = ROOT / 'images'
@@ -28,16 +29,12 @@ VIDEOS_DICT = {
 
 # ML Model config
 MODEL_DIR = ROOT / 'weights'
-# DETECTION_MODEL = MODEL_DIR / 'yolov8x-seg.pt'
-# Uncomment the line above and comment the line below if you want to use yolov8x-seg.pt
+# DETECTION_MODEL = MODEL_DIR / 'yolov8n-seg.pt'
+# Uncomment the line above and comment the line below if you want to use yolov8n-seg.pt
 # Place your custom model pt file name at the line below 
 # DETECTION_MODEL = MODEL_DIR / 'my_detection_model.pt'
 
-SEGMENTATION_MODEL = MODEL_DIR / 'yolov8x-seg.pt'
+SEGMENTATION_MODEL = MODEL_DIR / 'yolov8n-seg.pt'
 
 # Webcam
 WEBCAM_PATH = 0
-
-# Class indices for YOLOv8 detection
-ANTHILL_CLASS_INDEX = 0  # Modifica este valor si tu modelo usa un índice diferente para hormigueros
-ANT_CLASS_INDEX = 1  # Modifica este valor si tu modelo usa un índice diferente para hormigas
