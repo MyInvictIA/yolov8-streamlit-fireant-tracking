@@ -3,7 +3,7 @@
 Get ready for cutting-edge object detection magic! This web app combines the power of YOLOv8 🔍 for object detection and segmentation with the simplicity of the Streamlit framework to deliver real-time object detection and tracking in video streams. ✨🎥
 
 ## Announcements
-- 🏆🎉 We are excited to announce that our team, MyInvicTIA, has secured the third position in the Huawei ICT Competition at the Innovate Stage 2023-24! We are honored by this achievement and look forward to participating in the upcoming Castilla y León's Boards Innovation Contest. 
+- 🏆🎉 We are excited to announce that our team, MyInvictIA, has secured the third position in the Huawei ICT Competition at the Innovate Stage 2023-24! We are honored by this achievement and look forward to participating in the upcoming Castilla y León's Boards Innovation Contest. 
 
 ## 📝⌛ To Do
 - [ ] Examples of the app running.
@@ -32,33 +32,50 @@ Picture coming soon! 🎞️
 
 ## 📦🔨 Requirements
 
-* requests
-* streamlit
-* pathlib
-* pandas
-* Pillow
-* numpy
-* opencv-python-headless
-* lapx
-* Cython
-* Pillow
-* ultralytics
-* python-multipart
-* aiofiles
-* datetime
-* pytube
+- aiofiles==23.2.1
+- fastapi==0.110.2
+- numpy==1.24.4
+- opencv_python_headless==4.8.1.78
+- lapx==0.5.7
+- python-multipart==0.0.9
+- python-dateutil==2.8.2
+- DateTime==5.5
+- pandas==2.0.3
+- Pillow==10.3.0
+- pytube==15.0.0
+- Requests==2.31.0
+- streamlit==1.33.0
+- ultralytics==8.1.38
+- uvicorn==0.29.0
+- torch==2.2.2
 
-## 🛠🔧 Installation
-- Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
-- Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
-- Run the following command tu build the docker container: `docker-compose build`
-- Run the following command tu run the docker container: `docker-compose up -d`
+## 🌟🔭🔧 How to Run Locally **without** Docker
+1. If you already have Python installed, you can skip the following steps until cloning the repo, if not run the following commands to install Python 3.10 in Ubuntu.
+2.  Update Ubuntu before installing Python: `sudo apt update && sudo apt upgrade` 
+3. Import Python PPA on Ubuntu: `sudo add-apt-repository ppa:deadsnakes/ppa`
+4. Refresh APT Sources List for Python PPA on Ubuntu: `sudo apt update`
+5. Install Python 3.10 on Ubuntu: `sudo apt install python3.10 && sudo apt install python3.10-venv`
+6. Verify Python 3.10 Installation on Ubuntu: `python3.10 --version`
+### Clone the Repo
+1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
+2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/yolov8_app/`
+3. Install Git LFS: `sudo apt install git-lfs`
+4. Initialize Git LFS: `git lfs install`
+5. Pull the LFS files: `git lfs pull`
+6. Run the following command to create a python environment: `python3.10 -m venv env`
+7. Activate the environment with: `source env/bin/activate`
+8. Install the requirements: `pip install -r requirements.txt`
+9. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --reload`
 
-- yolov8_app can run on NVIDIA GPU thanks to CUDA and on CPU if you don't have a GPU.
-
-## 🌟🔭 Usage
-* Launch the app: `docker-compose up -d`
-* Open a browser and get into the following URL: `http://localhost:8501`
+## 🌟🔭🐋 How to Run Locally **with** Docker
+1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
+2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
+3. Install Git LFS: `sudo apt install git-lfs`
+4. Initialize Git LFS: `git lfs install`
+5. Pull the LFS files: `git lfs pull`
+6. Launch the app: `docker-compose up -d`
+7. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
+8. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ### 🔧🧰 ML Model Config
 - Task time! Choose your mission: 🎯 Segmentation* supported only.

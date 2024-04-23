@@ -25,4 +25,4 @@ EXPOSE 8501
 
 # Run app.py when the container launches
 #CMD ["streamlit", "run", "app.py"]
-CMD uvicorn main:app --host 0.0.0.0 --port 8000 & streamlit run --server.port 8501 app.py
+CMD uvicorn main:app --host 0.0.0.0 --port --reload & streamlit run --server.port 8501 app.py
