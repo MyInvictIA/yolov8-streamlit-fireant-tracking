@@ -8,7 +8,8 @@
 
 # Create a Docker Image for Training a Model
 We built our own Docker Image based on a Hawei Docker with CUDA support.
-1. Get an Elastic Cloud Server (ECS) instance with only CPU, RAM and Disk resources. We used "General Computing s6" with 4 vCPUs, 8 GB RAM and 110 GB Disk.
+1. Get an Elastic Cloud Server (ECS) instance with only CPU, RAM and Disk resources. We used **s6.xlarge.2** with 4 vCPUs, 8 GB RAM and 110 GB Disk.
+![img.png](img.png)
 2. Install Docker on the ECS instance.
 ```bash
 curl -fsSL https://get.docker.com -o get-docker.sh
