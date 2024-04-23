@@ -66,6 +66,8 @@ Picture coming soon! 🎞️
 7. Activate the environment with: `source env/bin/activate`
 8. Install the requirements: `pip install -r requirements.txt`
 9. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --reload`
+10. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
+11. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ## 🌟🔭🐋 How to Run Locally **with** Docker
 1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
