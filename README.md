@@ -65,7 +65,7 @@ Picture coming soon! 🎞️
 6. Run the following command to create a python environment: `python3.10 -m venv env`
 7. Activate the environment with: `source env/bin/activate`
 8. Install the requirements: `pip install -r requirements.txt`
-9. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --reload`
+9. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --host 0.0.0.0 --port 8000 --reload`
 10. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
 11. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
