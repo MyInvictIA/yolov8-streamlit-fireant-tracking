@@ -1,3 +1,5 @@
+# Repository URL for the project, change the following line to support GPU acceleration, from "cpu" to "cu121"
+--index-url https://download.pytorch.org/whl/cpu
 --extra-index-url https://pypi.org/simple
 aiofiles==23.2.1
 fastapi==0.110.2
@@ -14,8 +16,6 @@ Requests==2.31.0
 streamlit==1.33.0
 ultralytics==8.1.38
 uvicorn==0.29.0
-# Repository URL for the project, change the following line to support GPU acceleration, from "cpu" to "cu121"
---index-url https://download.pytorch.org/whl/cpu
 # Use this line if you are using a CPU
 torch==2.2.2
 # Uncomment this line if you are using a Nvidia GPU and disable the line above
