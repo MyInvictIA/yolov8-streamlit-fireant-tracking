@@ -140,7 +140,7 @@ if source_radio == settings.IMAGE:
                 else:
                     st.write("No objects were detected in the image.")
 
-# Detect on images with API
+# If image with API is selected
 if source_radio == settings.IMAGE_API:
     source_option = st.sidebar.radio("Image Source", ["Local", "URL"])
     if source_option == "Local":
@@ -159,7 +159,7 @@ if source_radio == settings.IMAGE_API:
 
     df = pd.DataFrame()  # Inicializar df como un DataFrame vacío
     col1, col2 = st.columns(2)
-
+    st.write("API Image Detection doesn't work in Streamlit Servers becase the API can't load there. Please run this locally to test it out.")
     with col1:
         try:
             if source_img is None:
@@ -270,5 +270,5 @@ elif source_radio == settings.RTSP:
 elif source_radio == settings.YOUTUBE:
     helper.play_youtube_video(confidence, model)
 
-else:
-    st.warning("Please select a valid source type!")
+# else:
+#     st.warning("Please select a valid source type!")

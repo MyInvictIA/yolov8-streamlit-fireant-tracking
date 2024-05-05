@@ -47,16 +47,18 @@ Picture coming soon! 🎞️
 - streamlit==1.33.0
 - ultralytics==8.1.38
 - uvicorn==0.29.0
-- torch==2.2.2
+- torch==2.2.2+cpu
+- torchvision==0.17.2+cpu
 
-## 🌟🔭🔧 How to Run Locally **without** Docker
+## 🌟🔭🔧 How to Install Python 3.10 in Ubuntu
 1. If you already have Python installed, you can skip the following steps until cloning the repo, if not run the following commands to install Python 3.10 in Ubuntu.
 2.  Update Ubuntu before installing Python: `sudo apt update && sudo apt upgrade` 
 3. Import Python PPA on Ubuntu: `sudo add-apt-repository ppa:deadsnakes/ppa`
 4. Refresh APT Sources List for Python PPA on Ubuntu: `sudo apt update`
 5. Install Python 3.10 on Ubuntu: `sudo apt install python3.10 && sudo apt install python3.10-venv`
 6. Verify Python 3.10 Installation on Ubuntu: `python3.10 --version`
-### Clone the Repo
+
+## 🌟🔭🔧 How to Run Locally just with Python and Virtual Environment
 1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/yolov8_app/`
 3. Install Git LFS: `sudo apt install git-lfs`
@@ -69,15 +71,16 @@ Picture coming soon! 🎞️
 10. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
 11. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
-## 🌟🔭🐋 How to Run Locally **with** Docker
+## 🌟🔭🐋 How to Run Locally with Docker Compose
 1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
 3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
 5. Pull the LFS files: `git lfs pull`
-6. Launch the app: `docker-compose up -d`
-7. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
-8. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
+6. Launch the app: `docker-compose -f ./docker-compose.yml up -d`
+7. And if you want to sync changes in real-time: `docker-compose -f .\docker-compose.yml watch`
+8. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
+9. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ### 🔧🧰 ML Model Config
 - Task time! Choose your mission: 🎯 Segmentation* supported only.
