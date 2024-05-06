@@ -7,15 +7,13 @@ FROM python:3.10-slim
 WORKDIR /app
 
 # Install dependencies necessary for OpenCV
-RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
-    libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
-
+#RUN apt-get update && apt-get install -y \
+#    libgl1-mesa-glx \
+#    libglib2.0-0 \
+#    && rm -rf /var/lib/apt/lists/*
 
 # Add the current directory contents into the container at /app
 COPY . /app
-#COPY requirements.txt /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -25,5 +23,4 @@ EXPOSE 8501
 EXPOSE 8000
 
 # Run app.py when the container launches
-#CMD ["streamlit", "run", "app.py"]
 CMD uvicorn main:app --host 0.0.0.0 --port 8000 --reload & streamlit run --server.port 8501 app.py

@@ -164,6 +164,11 @@ cython_debug/
 .idea/inspectionProfiles/Project_Default.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/misc.xml
-README.md
 app-back.py
 app-bck_2.py
+yolov8_app/app-backup.py
+yolov8_app/requirements-backup.txt
+yolov8_app/app-backup.py
+yolov8_app/requirements-backup.txt
+yolov8_app/app-backup.py
+docker-compose-backup.yml

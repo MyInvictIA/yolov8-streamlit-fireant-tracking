@@ -4,7 +4,8 @@
 aiofiles==23.2.1
 fastapi==0.110.2
 numpy==1.24.4
-opencv_python_headless==4.8.1.78
+#opencv_python_headless==4.8.1.78
+opencv-contrib-python-headless==4.9.0.80
 lapx==0.5.7
 python-multipart==0.0.9
 python-dateutil==2.8.2
