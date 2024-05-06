@@ -172,3 +172,4 @@ yolov8_app/app-backup.py
 yolov8_app/requirements-backup.txt
 yolov8_app/app-backup.py
 docker-compose-backup.yml
+docker-compose-backup.yml
