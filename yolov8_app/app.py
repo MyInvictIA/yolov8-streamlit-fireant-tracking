@@ -79,10 +79,11 @@ if source_radio == settings.IMAGE:
     with col1:
         try:
             if source_img is None:
-                default_image_path = str(settings.DEFAULT_IMAGE)
-                default_image = Image.open(default_image_path)
-                st.image(default_image_path, caption="Default Image",
-                         use_column_width="auto")
+                st.write("No image is uploaded yet!")
+                # default_image_path = str(settings.DEFAULT_IMAGE)
+                # default_image = Image.open(default_image_path)
+                # st.image(default_image_path, caption="Default Image",
+                #          use_column_width="auto")
             else:
                 uploaded_image = Image.open(source_img)
                 st.image(source_img, caption="Uploaded Image",
@@ -93,11 +94,12 @@ if source_radio == settings.IMAGE:
 
     with col2:
         if source_img is None:
-            default_detected_image_path = str(settings.DEFAULT_DETECT_IMAGE)
-            default_detected_image = Image.open(
-                default_detected_image_path)
-            st.image(default_detected_image_path, caption='Detected Image',
-                     use_column_width="auto")
+            st.write("No image is uploaded yet!")
+            # default_detected_image_path = str(settings.DEFAULT_DETECT_IMAGE)
+            # default_detected_image = Image.open(
+            #     default_detected_image_path)
+            # st.image(default_detected_image_path, caption='Detected Image',
+            #          use_column_width="auto")
         else:
             if st.sidebar.button('Run Detection'):
                 res = model.predict(uploaded_image, conf=confidence)
