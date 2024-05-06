@@ -20,4 +20,4 @@ uvicorn[standard]
 # Use this line if you are using a CPU
 #torch==2.2.2
 # Uncomment this line if you are using a Nvidia GPU and disable the line above
-torch==2.2.1+cu121
+torch[standard]
