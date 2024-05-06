@@ -1,7 +1,7 @@
 # Dockerfile
 # Use an official PyTorch CUDA runtime as a parent image
-#FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
-FROM python:3.10-slim
+FROM pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
+#FROM python:3.10-slim
 
 # Set the working directory in the container to /app
 WORKDIR /app
