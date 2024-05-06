@@ -1,0 +1,3 @@
+# This is a Dockerfile list of dependencies for the project needed by Streamlit Cloud.
+# The list below will be installed using 'apt-get install' command.
+libgl1
