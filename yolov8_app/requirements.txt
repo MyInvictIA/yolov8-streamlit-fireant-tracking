@@ -1,23 +1,23 @@
 # Repository URL for the project, change the following line to support GPU acceleration, from "cpu" to "cu121"
 --index-url https://download.pytorch.org/whl/cu121
 --extra-index-url https://pypi.org/simple
-aiofiles[standard]
-fastapi[standard]
-numpy[standard]
+aiofiles
+fastapi
+numpy
 #opencv_python_headless==4.8.1.78
-opencv-contrib-python-headless[standard]
-lapx[standard]
-python-multipart[standard]
-python-dateutil[standard]
-DateTime[standard]
-pandas[standard]
-Pillow[standard]
-pytube[standard]
-Requests[standard]
-streamlit[standard]
-ultralytics[standard]
-uvicorn[standard]
+opencv-contrib-python-headless
+lapx
+python-multipart
+python-dateutil
+DateTime
+pandas
+Pillow
+pytube
+Requests
+streamlit
+ultralytics
+uvicorn
 # Use this line if you are using a CPU
 #torch==2.2.2
 # Uncomment this line if you are using a Nvidia GPU and disable the line above
-torch[standard]
+torch
