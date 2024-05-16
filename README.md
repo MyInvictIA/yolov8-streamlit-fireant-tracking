@@ -3,34 +3,31 @@
 Get ready for cutting-edge object detection magic! This web app combines the power of YOLOv8 🔍 for object detection and segmentation with the simplicity of the Streamlit framework to deliver real-time object detection and tracking in video streams. ✨🎥
 
 ## Announcements
-- 🏆🎉 We are excited to announce that our team, MyInvictIA, has secured the third position in the Huawei ICT Competition at the Innovate Stage 2023-24! We are honored by this achievement and look forward to participating in the upcoming Castilla y León's Boards Innovation Contest. 
+- 🏆🎉 We are excited to announce that our team, MyInvictIA, has secured the third position in the Huawei ICT Competition at the Innovate Stage 2023-24! We are honored by this achievement and also pleased for participating in the last Castilla y León's Boards Innovation Contest 2024. 
 
 ## 📝⌛ To Do
-- [ ] Examples of the app running.
+- [X] Examples of the app running.
 - [ ] Examples of API usage.
 - [ ] 🔄 Migrate the application to a new Dashboard based on Vue.js and Flask among others.
 
 ## 🚀💻 Demo WebApp
-[![Demonstration of WebApp](https://img.youtube.com/vi/mBqrbDk6U6c/0.jpg)](https://www.youtube.com/watch?v=mBqrbDk6U6c)
-
+[Demonstration of WebApp](./assets/videos/achieved-results.mp4)
 - Check out this app in action 🏃‍♂️ – it's up and running on the Streamlit cloud server! ☁️ Thanks to the fantastic folks at Streamlit for supporting the community with cloud uploads. Here's where you can see it live:
-
-- [yolov8-streamlit-detection-tracking-webapp]()
+- [Demo Web App Avaidable](https://myinvictia-yolov8-app.streamlit.app/)
+- ⚠️ Note: The cloud server may take a few seconds to load the app. Please be patient! 🕰️
 
 ## 🕵️‍♀️🔎 Tracking with Object Detection Demo Video
 Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 
 ## 📸📷 Demo Pics
 - Home page 🏠
-- Picture coming soon!  📸
+
+![Picture Home Page](./assets/images/homepage.png)
 
 ## 📸🔍 Page after uploading an image and object detection
-Picture coming soon! 📷
+![](./assets/images/page-after-uploading-images.png)
 
-## 📸↔️ Segmentation task on image
-Picture coming soon! 🎞️
-
-## 📦🔨 Requirements
+## 📦🔨 Python's Requirements and Versions
 
 - aiofiles==23.2.1
 - fastapi==0.110.2
@@ -61,26 +58,26 @@ Picture coming soon! 🎞️
 ## 🌟🔭🔧 How to Run Locally just with Python and Virtual Environment
 1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/yolov8_app/`
-3. Install Git LFS: `sudo apt install git-lfs`
+<!-- 3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
-5. Pull the LFS files: `git lfs pull`
-6. Run the following command to create a python environment: `python3.10 -m venv env`
-7. Activate the environment with: `source env/bin/activate`
-8. Install the requirements: `pip install -r requirements.txt`
-9. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --host 0.0.0.0 --port 8000 --reload`
-10. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
-11. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
+5. Pull the LFS files: `git lfs pull`-->
+3. Run the following command to create a python environment: `python3.10 -m venv env`
+4. Activate the environment with: `source env/bin/activate`
+5. Install the requirements: `pip install -r requirements.txt`
+6. Run the app: `streamlit run app.py --server.port 8501 & uvicorn main:app --host 0.0.0.0 --port 8000 --reload`
+7. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
+8. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ## 🌟🔭🐋 How to Run Locally with Docker Compose
 1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
-3. Install Git LFS: `sudo apt install git-lfs`
+<!--3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
-5. Pull the LFS files: `git lfs pull`
-6. Launch the app: `docker-compose -f ./docker-compose.yml up -d`
-7. And if you want to sync changes in real-time: `docker-compose -f .\docker-compose.yml watch`
-8. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
-9. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
+5. Pull the LFS files: `git lfs pull`-->
+3. Launch the app: `docker-compose -f ./docker-compose.yml up -d`
+4. And if you want to sync changes in real-time: `docker-compose -f .\docker-compose.yml watch`
+5. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
+6. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ### 🔧🧰 ML Model Config
 - Task time! Choose your mission: 🎯 Segmentation* supported only.
@@ -96,7 +93,7 @@ Picture coming soon! 🎞️
 
 ## 🎬🔎 Detection in Videos
 - Demo Coming soon!.
-
+![Video]()
 - Press on `Detect Objects in Video ` button and the selected task will start on the selected video.
 
 ### 🌐🔍 Detection on RTSP
@@ -107,7 +104,7 @@ Picture coming soon! 🎞️
 - Choose YouTube as your source
 - Paste the URL into the text box.
 - Let the detection/segmentation task do its thing on the YouTube video!
-
+![Video]()
 ## 🙏☺️ Acknowledgements
 
 - This app owes its awesome object detection skills to the YOLOv8 algorithm (<https://github.com/ultralytics/ultralytics>).
