@@ -74,7 +74,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 <!--3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
 5. Pull the LFS files: `git lfs pull`-->
-3. Launch the app: `docker-compose -f ./docker-compose.yml up -d`
+3. Launch the app: `docker compose -f ./docker-compose.yml up -d`
 4. And if you want to sync changes in real-time: `docker-compose -f .\docker-compose.yml watch`
 5. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
 6. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
@@ -93,7 +93,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 
 ## 🎬🔎 Detection in Videos
 - Demo Coming soon!.
-![Video]()
+<!--![Video]()-->
 - Press on `Detect Objects in Video ` button and the selected task will start on the selected video.
 
 ### 🌐🔍 Detection on RTSP
