@@ -32,7 +32,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 - aiofiles==23.2.1
 - fastapi==0.110.2
 - numpy==1.24.4
-- opencv_python_headless==4.8.1.78
+- opencv_contrib_python_headless==4.9.0.80
 - lapx==0.5.7
 - python-multipart==0.0.9
 - python-dateutil==2.8.2
@@ -42,7 +42,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 - pytube==15.0.0
 - Requests==2.31.0
 - streamlit==1.33.0
-- ultralytics==8.1.38
+- ultralytics==8.2.22
 - uvicorn==0.29.0
 - torch==2.2.2+cpu
 - torchvision==0.17.2+cpu
@@ -73,7 +73,8 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
 <!--3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
-5. Pull the LFS files: `git lfs pull`-->
+5. Pull the LFS files: `git lfs pull`
+6. Build the image: `docker build -t myinvictia-cpu:0.1 ./yolov8_app/.`-->
 3. Launch the app: `docker-compose -f ./docker-compose.yml up -d`
 4. And if you want to sync changes in real-time: `docker-compose -f .\docker-compose.yml watch`
 5. Open a browser and get into the following URL for the Web App: `http://localhost:8501`
