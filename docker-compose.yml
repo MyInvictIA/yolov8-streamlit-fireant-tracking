@@ -13,7 +13,7 @@ services:
       - 8000:8000
     restart: always
     container_name: myinvictia_yolov8_app
-# Uncomment the following lines to enable Nvidia GPU support:
+# The following lines are here to enable Nvidia GPU support:
     deploy:
       resources:
         reservations:
@@ -21,10 +21,3 @@ services:
             - driver: nvidia
               device_ids: ['0']
               capabilities: [gpu]
-#    deploy:
-#      resources:
-#        reservations:
-#          devices:
-#            - driver: nvidia
-#              count: 1
-#              capabilities: [gpu]
