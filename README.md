@@ -56,7 +56,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 6. Verify Python 3.10 Installation on Ubuntu: `python3.10 --version`
 
 ## 🌟🔭🔧 How to Run Locally just with Python and Virtual Environment
-1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
+1. Clone this repo: `git clone -b gpu-support https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/yolov8_app/`
 <!-- 3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
@@ -69,7 +69,7 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 8. Open a browser and get into the following URL for the API: `http://localhost:8000/docs`
 
 ## 🌟🔭🐋 How to Run Locally with Docker Compose
-1. Clone this repo: `git clone https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
+1. Clone this repo: `git clone -b gpu-support https://github.com/MyInvictIA/yolov8-streamlit-fireant-tracking.git`
 2. Hop into the directory: `cd yolov8-streamlit-fireant-tracking/`
 <!--3. Install Git LFS: `sudo apt install git-lfs`
 4. Initialize Git LFS: `git lfs install`
