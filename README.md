@@ -7,7 +7,7 @@ Get ready for cutting-edge object detection magic! This web app combines the pow
 
 ## 📝⌛ To Do
 - [X] Examples of the app running.
-- [ ] Examples of API usage.
+- [X] Examples of API usage.
 - [ ] 🔄 Migrate the application to a new Dashboard based on Vue.js and Flask among others.
 
 ## 🚀💻 Demo WebApp
@@ -26,6 +26,12 @@ Coming soon! 📹 Stay tuned for a demo showcasing this awesome feature
 
 ## 📸🔍 Page after uploading an image and object detection
 ![](./assets/images/page-after-uploading-images.png)
+
+## 📸🔍Example using the API
+````bash
+curl -X 'POST' 'http://local-ip-address:8000/detect_img' -H 'accept: application/json' -F 'image=@IMAGE_NAME.jpg;type=image/jepg'
+````
+![img.png](assets/images/img-api.png)
 
 ## 📦🔨 Python's Requirements and Versions
 
